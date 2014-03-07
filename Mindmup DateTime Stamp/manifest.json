@@ -1,0 +1,36 @@
+{
+  "manifest_version": 2,
+  "name": "MindMup DateTime Stamps",  
+  "version": "1.0.2",
+  "description": "Will insert a datetime stamp into current text field.",
+  "icons": 
+  {
+    "16": "images/mindmupclock16.png",
+    "48": "images/mindmupclock64.png",
+    "128": "images/mindmupclock128.png"
+  },  
+  "short_name": "MindMupStamp",
+  "content_scripts":[
+	  {
+		  "matches":["http://www.mindmup.com/*"],
+		  "js":["jquery-1.10.2.min.js", "contentscript.js"]
+	  }
+  ],
+  "background" : {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "permissions":[
+    "storage",
+		"http://www.mindmup.com/*"
+  ],
+  "page_action": {
+    "default_icon": {                   
+      "19": "images/mindmupclock19.png",          
+      "38": "images/mindmupclock38.png"            
+    },
+    "default_title": "Mind Mup Date Time Stamp",      
+    "default_popup": "popup.html"        
+  },
+  "web_accessible_resources": ["jquery-1.10.2.min.map", "jquery-1.10.2.min.js"]
+}

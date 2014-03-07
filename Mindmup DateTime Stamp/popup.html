@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+  <head>
+    <title>MindMup DateTime Stamp</title>
+    <style>
+      body {
+        min-width: 350px;
+        overflow-x: hidden;
+        background: #FDFDFD;
+      }
+      input, textarea, select, h2, form, button{
+        color: #58595B;
+        font-family: MyriadPro-Regular, 'Myriad Pro Regular', MyriadPro, 'Myriad Pro', Helvetica, Arial, sans-serif;Tahoma,Arial,Helvetica,Verdana,sans-serif;
+      }
+      h2{
+        margin: 15px 20px;
+      }
+     .savebutton{
+        text-align:center;
+        text-decoration: none;
+        -webkit-font-smoothing: antialiased;
+        color: #FFF;
+        background: #3bafda;
+        border:0 rgba(0,0,0,0);
+        padding: 8px 20px;
+        display: inline-block;
+        white-space: nowrap;
+        -webkit-border-radius: 2px;
+        -moz-border-radius: 2px;
+        border-radius: 2px;
+        margin: 10px 0;
+        font-size: 15px;
+        -webkit-transition: all 0.2s ease-in-out;
+        -ms-transition: all 0.2s ease-in-out;
+        -moz-transition: all 0.2s ease-in-out;
+        -o-transition: all 0.2s ease-in-out;
+        transition: all 0.2s ease-in-out;
+        margin-left: 42%;
+      }
+      .savebutton:hover {
+        background: #349CC2;
+      }
+      .inputbox label {
+          float: left;
+          width: 32%;
+          text-align: right;
+          margin-right: 2em;
+          white-space: nowrap;
+          line-height: 27px;
+      }
+      .inputbox input {
+        font-size: 15px;
+      }
+    </style>
+    <script src="popup.js"></script>
+  </head>
+  <body>
+    <h2>DateTime Stamp Preferences</h2>
+
+    <form class="formbox" name ="preferences">
+   
+        <div class="inputbox">
+            <label for="initials">Initials: </label>
+            <input type="text" id="initialsText" name="initials">
+        </div>
+
+        <div class="inputbox">
+            <label for="shortcutkey">Shortcut Key: </label>
+            <input  type="text" id="shortcutText" name="shortcutkey" >
+        </div>
+        <div class="submitbox">
+            <button type="submit"  id="savebutton"class="savebutton">Save</button>
+        </div>
+
+</form>
+  </body>
+</html>
